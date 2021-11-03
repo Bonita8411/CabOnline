@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Page</title>
+<!--
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="style.css">
+
+	<script type="text/javascript" src="xhr.js"></script>
+    <script type="text/javascript" src="process.js"> </script>
+
+
+</head>
+<body>
+	<nav>
+		<div class="nav-wrapper cyan">
+			<a href="#" class="brand-logo center">CabsOnline</a>
+			<ul id="nav-mobile" class="right">
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="admin.html">Admin</a></li>
+              </ul>
+		</div>
+	</nav>
+	<div class="center-wrapper">
+		<div class="row">
+			<strong><h3> Assign Taxi System </h3></strong>
+		</div>
+		<div class="row">
+			<form name="admin" id="admin"></form>
+				<strong><h5>Assign Taxi</h5></strong>
+				<div class="input-field col s12">
+					<strong><p>Reference Number:</strong>
+						<input type = "number" name="reference" value="" required>
+				</div>
+				<input class="btn wave-effect waves-light cyan" type="submit" value="Assign Taxi" id="viewButton" name="viewButton" onclick="assignTaxi('assignTaxi.php', 'targetDiv', reference.value)">
+			</form>
+		</div>
+<div id="targetDiv"> 
+	</div>
+<div class="centre-wrapper">
+	<div class="row">
+		<br>
+		<h5>Booking Requests</h5>
+		<h7>Show unassigned bookings in the next two hours</h7>
+		<br>
+		<br>
+		<br>
+		<input class="btn wave-effect waves-light cyan" type="submit" name="showRequests" id="showRequests" value="Show Booking Request" onclick="searchForTaxi('searchTaxi.php', 'searchDiv')">
+		<table id="unassigned-bookings">
+			<thead>
+				<tr>
+					<th>Reference Number</th>
+					<th>Customer Name</th>
+					<th>Phone</th>
+					<th>Pick-up Suburb</th>
+					<th>Destination Suburb</th>
+					<th>Pickup Date/Time</th>
+				</tr>
+			</thead>
+			<tbody id="unassigned-bookings-tbody">
+			</tbody>
+		</table>
+	</div>
+</div>
+<div id="searchDiv"> 
+	</div>
+
+</body>
+</html>
+

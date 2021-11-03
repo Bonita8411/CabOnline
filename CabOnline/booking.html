@@ -1,0 +1,92 @@
+<!--
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Booking Page</title>
+<!--
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="style.css">
+	
+	<script type="text/javascript" src="xhr.js"></script>
+	<script type="text/javascript" src="process.js"> </script>
+	<script type="text/javascript" src="validationForm.js"> </script>
+
+
+</head> 
+
+<body>
+	<nav>
+		<div class="nav-wrapper cyan">
+			<a href="#" class="brand-logo center">CabsOnline</a>
+			<ul id="nav-mobile" class="right">
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="admin.html">Admin</a></li>
+              </ul>
+		</div>
+	</nav>
+	<div class="center-wrapper">
+		<div class="row">
+			<strong><h3> Booking System </h3></strong>
+		</div>
+
+			<div class="row">
+				<form name="bookTaxi" id="bookTaxi">
+					<p>* indicate the required fields</p>
+					<strong><h5>Customer Information</h5></strong>
+					<div class="input-field col s6">
+						<strong><p>Name *</strong>
+						<input type = "text" name = "custName" ïd="custName" required>
+					</div>
+					<div class="input-field col s6">
+						<strong><p>Phone Number *</strong>
+						<input type = "number" name = "phoneNo" ïd="phoneNo" required>
+						<br>
+					</div>
+					<strong><h5>Pick-Up Address</h5></strong>
+					<div class="input file col s2">
+						<strong><p>Unit </strong>
+						<input type = "text" name = "unitNo" id="unitNo">
+					</div>
+					<div class="input file col s2">
+						<strong><p>Street Number *</strong>
+						<input type = "text" name = "streetNo" id="streetNo" required>
+					</div>
+					<div class="input file col s4">
+						<strong><p>Street Name *</strong>
+						<input type = "text" name = "streetName" id="streetName" required>
+					</div>
+					<div class="input file col s4">
+						<strong><p>Suburb *</strong>
+						<input type = "text" name = "suburb" id="suburb" required>
+						<br>
+					</div>
+					<strong><h5>Pick-Up Date & Time</h5></strong>
+					<div class="input file col s6">
+						<strong><p>Date *</strong>
+						<input type = "date" name = "date" id="date" required>
+					</div>
+					<div class="input file col s6">
+						<strong><p>Time *</strong>
+						<input type = "time" name = "time" id="time" required>
+						<br>
+					</div>
+					<strong><h5>Destination</h5></strong>
+					<div class="input file col s12">
+						<strong><p>Destination Suburb * </strong>
+						<input type = "text" name = "destSuburb" id="destSuburb" required>
+					</div>
+					<input class="btn wave-effect waves-light cyan" type="submit" name="sumit" id="submit" value="Place a Booking" onclick="validateForm()">
+			</div>
+		</form>
+	<div id="targetDiv"></div> 
+</body>
+</html>
